@@ -1,0 +1,44 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Records
+{% endblock %}
+
+{% block content %}
+
+  {% if isClassRecord != 0 %}
+<h1 class="mt-2">Records</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">CID</th>
+      <th scope="col">Code</th>
+      <th scope="col">Attendance</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for x in classes %}
+    <tr>
+    <th scope="row">{{ x.date }}</th>
+    <td><a href="{{ x.cid }}">{{ x.cid }}</a></td>
+    <td>{{ x.code }}</td>
+	{% if attendance_status == "YES" %}
+	    <td class="table-success">{{ x.attendance_status }}</td>
+	{% elif attendance_status == "NO" %}
+	    <td class="table-danger">{{ x.attendance_status }}</td>
+	{% else %}
+	    <td class="table-secondary">{{ x.attendance_status }}</td>
+	{% endif %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<div class="container text-center">
+  <h1 class="text-info">Oops!</h1>
+  <h4 class="text-muted">No Previous Records</h4>
+          <a class="text-white text-decoration-none" href="{% url 'input form' %}"><button class="btn btn-secondary"> Enter Records</button></a>
+</div>
+{% endif %}
+{% endblock %}

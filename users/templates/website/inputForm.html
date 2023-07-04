@@ -1,0 +1,15 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Input Attendance
+{% endblock %}
+
+
+    {% load crispy_forms_tags %}  
+{% block content %}
+<form method="post">
+          {% csrf_token %}
+              {{form|crispy}}
+              <button class="btn btn-secondary" type="submit">Submit</button>
+</form>
+{% endblock %}

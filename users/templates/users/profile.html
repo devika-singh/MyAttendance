@@ -1,0 +1,21 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Profile
+{% endblock %}
+
+
+{% block content %}
+	<h1 class="mt-2">Hi {{user.username}}!</h1>
+	<div>
+		  <a class="text-white text-decoration-none"  href="{% url 'delete all data' %}"><button class="btn btn-secondary">Start New Semester?</button></a>
+	</div>
+	<div>
+	{% for x in semester %}
+		<div>
+			<h3>Semester {{x.num}}</h3>
+			
+		</div>
+	{% endfor %}
+	</div>
+{% endblock %}

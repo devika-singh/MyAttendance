@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Delete Records
+{% endblock %}
+
+
+    {% load crispy_forms_tags %}  
+{% block content %}
+<h1>Delete all Records?</h1>
+<p class="text-muted">Enter your username below to confirm deleting all records</p>
+<p class="text-danger"><span class="text-decoration-underline">Warning</span>: This action is irreversible</p>
+<form method="post">
+          {% csrf_token %}
+              {{form|crispy}}
+              <button class="btn btn-danger" type="submit">Delete</button>
+</form>
+{% endblock %}

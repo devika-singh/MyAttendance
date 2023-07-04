@@ -1,0 +1,42 @@
+{% extends "master.html" %}
+
+{% block title %}
+  {{ cid }}
+{% endblock %}
+
+{% block content %}
+<h1 class="mt-2">{{cid}}</h1>
+{% if percentage < 75.0 %}
+<p>Attendance Percentage: <span  class="text-danger">{{percentage}}</span></p>
+{% else %}
+<p>Attendance Percentage: {{percentage}}</p>
+{% endif %}
+<p>Total Classes: {{ tot_classes }}</p>
+<p>Attendend Classes: {{ att_classes }}</p>
+<p>Absent Classes: {{ n_att_classes }}</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Code</th>
+      <th scope="col">Attendance</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for x in classes %}
+    <tr>
+    <th scope="row">{{ x.date }}</th>
+    <td>{{ x.code }}</td>
+	{% if attendance_status == "YES" %}
+	    <td class="table-success">{{ x.attendance_status }}</td>
+	{% elif attendance_status == "NO" %}
+	    <td class="table-danger">{{ x.attendance_status }}</td>
+	{% else %}
+	    <td class="table-secondary">{{ x.attendance_status }}</td>
+	{% endif %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<p>Back to <a href="/records">Records</a></p>
+{% endblock %}
