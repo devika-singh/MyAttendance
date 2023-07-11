@@ -1,9 +1,9 @@
 # MyAttendance
 Author: Devika Singh
 
-Link to working demo: https://myattendance-1.devikasingh1.repl.co/
-Demo UserName: User1
-Demo Password: dkNhJqixYVw5MAy
+Link to working demo: https://myattendance-1.devikasingh1.repl.co/  
+Demo UserName: User1  
+Demo Password: dkNhJqixYVw5MAy  
 
 # Tech Stack
 Django
