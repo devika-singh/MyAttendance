@@ -35,10 +35,9 @@ def profile(request):
 	
 @login_required()
 def records(request):
-  classes = request.user.classes.all().values()
+  classes = request.user.classes.all().values().order_by('date')
   template = loader.get_template('website/records.html')
   context = {
-		'courses': Class.objects.values('cid'),
     		'classes': classes,
 		'isRecordsActive':'text-white',
 		'isClassRecord': len(classes), 
@@ -53,7 +52,6 @@ def details(request, cid):
 	percentage = att_classes * 100 /tot_classes
 	context = {
 		'isStatsActive':'text-white',
-		'courses': Class.objects.values('cid'),
     		'classes': Class.objects.filter(cid=cid).values(),
 		'cid':cid,
 		'tot_classes':tot_classes,
