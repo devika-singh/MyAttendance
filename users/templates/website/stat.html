@@ -7,9 +7,9 @@
 {% block content %}
 <h1 class="mt-2">{{cid}}</h1>
 {% if percentage < 75.0 %}
-<p>Attendance Percentage: <span  class="text-danger">{{percentage}}</span></p>
+<p>Attendance Percentage: <span  class="text-danger">{{percentage|floatformat:2}}%</span></p>
 {% else %}
-<p>Attendance Percentage: {{percentage}}</p>
+<p>Attendance Percentage: {{percentage|floatformat:2}}%</p>
 {% endif %}
 <p>Total Classes: {{ tot_classes }}</p>
 <p>Attendend Classes: {{ att_classes }}</p>
