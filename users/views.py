@@ -48,8 +48,15 @@ def records(request):
 def details(request, cid):
 	template = loader.get_template('website/stat.html')
 	tot_classes = request.user.classes.all().filter(cid=cid).count()
-	att_classes = request.user.classes.all().filter(cid=cid,attendance_status='YES').count()
-	percentage = att_classes * 100 /tot_classes
+    	tot_NA_classes = request.user.classes.all().filter(cid=cid, attendance_status='N/A').count()
+    	if tot_NA_classes == tot_classes:
+        	tot_classes = 0
+   	att_classes = request.user.classes.all().filter(
+        cid=cid, attendance_status='YES').count()
+    	if tot_classes != 0:
+        	percentage = att_classes * 100 / tot_classes
+    	else:
+        	percentage = 0
 	context = {
 		'isStatsActive':'text-white',
     		'classes': Class.objects.filter(cid=cid).values(),
