@@ -23,6 +23,8 @@ bootstrap5
 ![image](https://github.com/devika-singh/MyAttendance/assets/95178561/b853560b-62be-431f-97b0-e99c098a7e43)
 ## Nav Bar Stat(no input records)
 ![image](https://github.com/devika-singh/MyAttendance/assets/95178561/46320410-f5fa-4901-81f0-091d6297e045)
+## Nav Bar Stat
+![image](https://github.com/devika-singh/MyAttendance/assets/95178561/0ee257f1-8f15-4ea6-b64f-8d6136cfd9f7)
 ## Login
 ![image](https://github.com/devika-singh/MyAttendance/assets/95178561/3f75d17e-d294-4467-a5a2-79149ed2dfb1)
 ## Logout
@@ -31,12 +33,20 @@ bootstrap5
 ![image](https://github.com/devika-singh/MyAttendance/assets/95178561/55acbe4c-deb8-40f7-b696-b71cbedff25f)
 ## Records Input Form
 ![image](https://github.com/devika-singh/MyAttendance/assets/95178561/3f54302c-45ae-40fb-b97b-ac412004dd01)
+## Records
+![image](https://github.com/devika-singh/MyAttendance/assets/95178561/3cb26852-f375-4f32-b52d-2b08a294926c)
 ## Records (Empty)
 ![image](https://github.com/devika-singh/MyAttendance/assets/95178561/ab4ef859-d3ec-4704-bdae-8690eae64dad)
 ## Profile
 ![image](https://github.com/devika-singh/MyAttendance/assets/95178561/a2f8c4c9-9161-49b9-a511-71afd35bcbca)
 ## Starting New Semester by deleting all records
 ![image](https://github.com/devika-singh/MyAttendance/assets/95178561/49108e6c-7092-45ee-9e9c-cb7ab9bd59a1)
+## Subject Page (Attendance >= 75%)
+![image](https://github.com/devika-singh/MyAttendance/assets/95178561/af5f5ff9-3a2a-418a-9adc-95a1bec0191f)
+## Subject Page (Attendance < 75%)
+![image](https://github.com/devika-singh/MyAttendance/assets/95178561/f68811d7-19b2-45bc-87ed-73d1c4dc4cdb)
+
+
 
 
 
